@@ -14,7 +14,7 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 75%, #533483 100%);
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
             min-height: 100vh;
             overflow-x: hidden;
             touch-action: manipulation;
@@ -39,17 +39,10 @@
             font-weight: bold;
             margin-bottom: 10px;
             text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
-            background: linear-gradient(45deg, #ffd700, #ff6b35, #f7931e, #ffd700);
+            background: linear-gradient(45deg, #14b8a6, #06b6d4, #3b82f6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            background-size: 200% 200%;
-            animation: gradientShift 3s ease-in-out infinite;
-        }
-
-        @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
         }
 
         .subtitle {
@@ -74,20 +67,13 @@
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
-            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c);
-            background-size: 300% 300%;
+            background: linear-gradient(45deg, #3b82f6, #1d4ed8);
             color: white;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3), inset 0 1px 0 rgba(255,255,255,0.2);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255,255,255,0.2);
             touch-action: manipulation;
             position: relative;
             overflow: hidden;
-            animation: gradientMove 4s ease-in-out infinite;
-        }
-
-        @keyframes gradientMove {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
         }
 
         .btn::before {
@@ -107,7 +93,7 @@
 
         .btn:hover, .btn:active {
             transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4), inset 0 1px 0 rgba(255,255,255,0.3);
+            box-shadow: 0 12px 35px rgba(59, 130, 246, 0.4), inset 0 1px 0 rgba(255,255,255,0.3);
         }
 
         .btn:active {
@@ -146,14 +132,14 @@
             padding: 8px 12px;
             border: none;
             border-radius: 15px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, #14b8a6, #0891b2);
             color: white;
             font-weight: bold;
             cursor: pointer;
             font-size: clamp(0.8rem, 2.5vw, 1rem);
             touch-action: manipulation;
             transition: all 0.2s ease;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 4px 15px rgba(20, 184, 166, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -228,30 +214,21 @@
         }
 
         .card-back {
-            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
-            background-size: 200% 200%;
+            background: #475569;
             color: white;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4), inset 0 2px 0 rgba(255,255,255,0.2);
-            animation: cardShimmer 3s ease-in-out infinite;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-        }
-
-        @keyframes cardShimmer {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
+            box-shadow: 0 8px 25px rgba(71, 85, 105, 0.4), inset 0 2px 0 rgba(255,255,255,0.1);
+            border: 2px solid #64748b;
         }
 
         .card-front {
-            background: linear-gradient(135deg, #f093fb, #f5576c, #4facfe, #00f2fe);
-            background-size: 200% 200%;
+            background: #f1f5f9;
             transform: rotateY(180deg);
-            color: #1a1a2e;
+            color: #1e293b;
             font-weight: bold;
-            text-shadow: 1px 1px 2px rgba(255,255,255,0.3);
-            box-shadow: 0 8px 25px rgba(240, 147, 251, 0.4), inset 0 2px 0 rgba(255,255,255,0.3);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            animation: cardShimmer 3s ease-in-out infinite;
+            text-shadow: none;
+            box-shadow: 0 8px 25px rgba(241, 245, 249, 0.4), inset 0 2px 0 rgba(255,255,255,0.8);
+            border: 2px solid #e2e8f0;
         }
 
         .card.matched {
@@ -289,8 +266,8 @@
             transform: translate(-50%, -50%);
             font-size: clamp(2rem, 8vw, 4rem);
             font-weight: bold;
-            color: #ffd700;
-            text-shadow: 3px 3px 8px rgba(0,0,0,0.7), 0 0 20px rgba(255, 215, 0, 0.5);
+            color: #14b8a6;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.7), 0 0 20px rgba(20, 184, 166, 0.5);
             pointer-events: none;
             z-index: 1000;
             opacity: 0;
@@ -307,11 +284,11 @@
             position: absolute;
             width: 10px;
             height: 10px;
-            background: radial-gradient(circle, #ffd700, #ff6b35);
+            background: radial-gradient(circle, #14b8a6, #0891b2);
             border-radius: 50%;
             pointer-events: none;
             animation: particle 1s ease-out forwards;
-            box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+            box-shadow: 0 0 10px rgba(20, 184, 166, 0.8);
         }
 
         /* Level Complete Modal */
@@ -329,7 +306,7 @@
         }
 
         .modal-content {
-            background: linear-gradient(135deg, #1a1a2e, #16213e, #533483);
+            background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
             padding: 30px;
             border-radius: 20px;
             text-align: center;
@@ -338,7 +315,7 @@
             max-height: 90vh;
             overflow-y: auto;
             box-shadow: 0 20px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
-            border: 2px solid rgba(255, 255, 255, 0.1);
+            border: 2px solid #475569;
         }
 
         .modal h2 {
@@ -399,10 +376,10 @@
             border-color: #ffd700;
         }
 
-        .theme-default { background: linear-gradient(45deg, #667eea, #764ba2); }
-        .theme-ocean { background: linear-gradient(45deg, #4facfe, #00f2fe); }
-        .theme-sunset { background: linear-gradient(45deg, #fa709a, #fee140); }
-        .theme-forest { background: linear-gradient(45deg, #56ab2f, #a8e6cf); }
+        .theme-default { background: linear-gradient(45deg, #3b82f6, #1d4ed8); }
+        .theme-ocean { background: linear-gradient(45deg, #06b6d4, #0891b2); }
+        .theme-sunset { background: linear-gradient(45deg, #f59e0b, #d97706); }
+        .theme-forest { background: linear-gradient(45deg, #10b981, #059669); }
     </style>
 </head>
 <body>
